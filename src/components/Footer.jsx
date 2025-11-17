@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import TermsAccordion from './TermsAccordion';
+import { Github, Linkedin, Twitter, Mail, MessageCircle } from 'lucide-react';
 
 const Footer = () => {
   const quickLinks = [
@@ -37,9 +38,64 @@ const Footer = () => {
             transition={{ duration: 0.6 }}
           >
             <h3 className="text-2xl font-bold mb-4">DEV.PORTFOLIO</h3>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-400 leading-relaxed mb-4">
               Building the future, one line of code at a time.
             </p>
+            <div className="flex flex-wrap gap-3 mt-4">
+              <motion.a
+                href="https://github.com/prankurpandeyy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 bg-gray-800 border-2 border-gray-700 text-white hover:bg-coral hover:border-coral transition-all rounded"
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                aria-label="GitHub"
+              >
+                <Github className="w-5 h-5" />
+              </motion.a>
+              <motion.a
+                href="https://linkedin.com/in/prankurpandeyy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 bg-gray-800 border-2 border-gray-700 text-white hover:bg-coral hover:border-coral transition-all rounded"
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-5 h-5" />
+              </motion.a>
+              <motion.a
+                href="https://x.com/prankurpandeyy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 bg-gray-800 border-2 border-gray-700 text-white hover:bg-coral hover:border-coral transition-all rounded"
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                aria-label="Twitter/X"
+              >
+                <Twitter className="w-5 h-5" />
+              </motion.a>
+              <motion.a
+                href="mailto:pprankur@gmail.com"
+                className="p-2 bg-gray-800 border-2 border-gray-700 text-white hover:bg-coral hover:border-coral transition-all rounded"
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                aria-label="Email"
+              >
+                <Mail className="w-5 h-5" />
+              </motion.a>
+              <motion.a
+                href="https://wa.me/917580909961"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 bg-gray-800 border-2 border-gray-700 text-white hover:bg-coral hover:border-coral transition-all rounded"
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                aria-label="WhatsApp"
+              >
+                <MessageCircle className="w-5 h-5" />
+              </motion.a>
+            </div>
           </motion.div>
 
           {/* Middle Column */}
@@ -110,7 +166,7 @@ const Footer = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center text-gray-400 pt-8 border-t border-gray-700"
         >
-          <p>© 2024 Developer Portfolio. All rights reserved.</p>
+          <p>© 2024 Prankur Pandey. All rights reserved.</p>
         </motion.div>
       </div>
     </footer>

@@ -1,31 +1,39 @@
 import { motion } from 'framer-motion';
-import { Code, Smartphone, FileText, Settings } from 'lucide-react';
+import { Code, Smartphone, FileText, BarChart3, Cloud } from 'lucide-react';
 
 const Skills = () => {
   const skills = [
     {
-      icon: <Code className="w-8 h-8" />,
-      title: 'MERN Stack Development',
-      description: 'Building robust full-stack applications with MongoDB, Express, React, and Node.js. Creating scalable RESTful APIs and modern user interfaces.',
+      icon: <Code className="w-10 h-10" />,
+      title: 'Web and Mobile App Development',
+      description: 'Building modern, scalable web applications with MERN stack and React Native for cross-platform mobile development. Creating responsive, user-friendly experiences for both web and mobile platforms.',
       bgColor: 'bg-pink-100',
+      iconBg: 'bg-pink-200',
+      borderColor: 'border-pink-300',
     },
     {
-      icon: <Smartphone className="w-8 h-8" />,
-      title: 'React Native',
-      description: 'Developing cross-platform mobile applications with React Native. Delivering native performance with a single codebase for iOS and Android.',
-      bgColor: 'bg-cyan-100',
-    },
-    {
-      icon: <FileText className="w-8 h-8" />,
+      icon: <FileText className="w-10 h-10" />,
       title: 'Technical Writing',
-      description: 'Creating comprehensive documentation, tutorials, and technical articles. Making complex concepts accessible to developers of all levels.',
+      description: 'Creating comprehensive documentation, tutorials, and technical articles that make complex concepts accessible. Specializing in developer-focused content for platforms like Dev.to and FreeCodeCamp.',
       bgColor: 'bg-amber-100',
+      iconBg: 'bg-amber-200',
+      borderColor: 'border-amber-300',
     },
     {
-      icon: <Settings className="w-8 h-8" />,
-      title: 'DevOps',
-      description: 'Streamlining development workflows with CI/CD pipelines, containerization, and cloud infrastructure. Ensuring reliable deployments.',
-      bgColor: 'bg-purple-100',
+      icon: <BarChart3 className="w-10 h-10" />,
+      title: 'Data Analysis',
+      description: 'Analyzing complex datasets using Python and modern data processing tools. Extracting actionable insights and presenting findings through clear visualizations and comprehensive reports.',
+      bgColor: 'bg-blue-100',
+      iconBg: 'bg-blue-200',
+      borderColor: 'border-blue-300',
+    },
+    {
+      icon: <Cloud className="w-10 h-10" />,
+      title: 'DevOps Work',
+      description: 'Streamlining development workflows with AWS cloud infrastructure, CI/CD pipelines, Docker containerization, and automated deployments. Ensuring scalable, reliable, and efficient systems.',
+      bgColor: 'bg-cyan-100',
+      iconBg: 'bg-cyan-200',
+      borderColor: 'border-cyan-300',
     },
   ];
 
@@ -45,25 +53,34 @@ const Skills = () => {
           <div className="w-24 h-1 bg-coral mx-auto"></div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {skills.map((skill, index) => (
             <motion.div
               key={skill.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={`${skill.bgColor} border-4 border-black p-8 hover:shadow-2xl transition-all duration-300`}
-              whileHover={{ y: -5, scale: 1.02 }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
+              className={`${skill.bgColor} border-4 border-black p-10 hover:shadow-2xl transition-all duration-300 relative overflow-hidden group`}
+              whileHover={{ y: -8, scale: 1.02 }}
             >
-              <div className="flex items-start space-x-4">
-                <div className="bg-white border-2 border-black p-3 flex-shrink-0">
-                  {skill.icon}
+              {/* Decorative corner element */}
+              <div className={`absolute top-0 right-0 w-32 h-32 ${skill.iconBg} opacity-20 transform rotate-45 translate-x-8 -translate-y-8 group-hover:opacity-30 transition-opacity`}></div>
+              
+              <div className="relative z-10">
+                <div className={`${skill.iconBg} border-4 border-black p-4 w-fit mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className="text-gray-900">
+                    {skill.icon}
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-2xl font-bold mb-3">{skill.title}</h3>
-                  <p className="text-gray-700 leading-relaxed">{skill.description}</p>
-                </div>
+                
+                <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900 leading-tight">
+                  {skill.title}
+                </h3>
+                
+                <p className="text-gray-700 leading-relaxed text-lg">
+                  {skill.description}
+                </p>
               </div>
             </motion.div>
           ))}

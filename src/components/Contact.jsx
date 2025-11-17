@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Twitter, Mail, MapPin } from 'lucide-react';
+import { Github, Linkedin, Twitter, Mail, MapPin, MessageCircle } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -67,10 +67,21 @@ const Contact = () => {
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-coral" />
                 <a
-                  href="mailto:hello@developer.com"
+                  href="mailto:pprankur@gmail.com"
                   className="text-gray-800 hover:text-coral transition-colors"
                 >
-                  hello@developer.com
+                  pprankur@gmail.com
+                </a>
+              </div>
+              <div className="flex items-center space-x-3">
+                <MessageCircle className="w-5 h-5 text-coral" />
+                <a
+                  href="https://wa.me/917580909961"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-800 hover:text-coral transition-colors"
+                >
+                  +91-7580909961
                 </a>
               </div>
               <div className="flex items-center space-x-3">
@@ -78,9 +89,9 @@ const Contact = () => {
                 <span className="text-gray-800">Available Worldwide (Remote)</span>
               </div>
             </div>
-            <div className="flex space-x-4 pt-4">
+            <div className="flex flex-wrap gap-4 pt-4">
               <motion.a
-                href="https://github.com"
+                href="https://github.com/prankurpandeyy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 bg-white border-2 border-black font-bold hover:bg-coral hover:text-white hover:border-coral transition-all"
@@ -91,7 +102,7 @@ const Contact = () => {
                 Github
               </motion.a>
               <motion.a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/prankurpandeyy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 bg-white border-2 border-black font-bold hover:bg-coral hover:text-white hover:border-coral transition-all"
@@ -102,7 +113,7 @@ const Contact = () => {
                 Linkedin
               </motion.a>
               <motion.a
-                href="https://twitter.com"
+                href="https://x.com/prankurpandeyy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 bg-white border-2 border-black font-bold hover:bg-coral hover:text-white hover:border-coral transition-all"

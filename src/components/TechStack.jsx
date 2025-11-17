@@ -2,33 +2,33 @@ import { motion } from 'framer-motion';
 
 const TechStack = () => {
   const technologies = [
+    // MERN Stack
     { name: 'React', icon: '⚛️' },
-    { name: 'Next.js', icon: '▲' },
     { name: 'Node.js', icon: '🟢' },
     { name: 'Express', icon: '🚂' },
     { name: 'MongoDB', icon: '🍃' },
-    { name: 'MySQL', icon: '🗄️' },
-    { name: 'TypeScript', icon: '📘' },
     { name: 'JavaScript', icon: '📜' },
-    { name: 'Angular', icon: '🅰️' },
-    { name: 'Terraform', icon: '🏗️' },
-    { name: 'Ansible', icon: '🔧' },
-    { name: 'Jenkins', icon: '🤖' },
-    { name: 'GitHub', icon: '🐙' },
-    { name: 'GitLab', icon: '🦊' },
-    { name: 'Postman', icon: '📮' },
+    
+    // Python
+    { name: 'Python', icon: '🐍' },
+    
+    // DevOps & AWS
     { name: 'AWS', icon: '☁️' },
     { name: 'Docker', icon: '🐳' },
-    { name: 'Kubernetes', icon: '☸️' },
-    { name: 'Prometheus', icon: '📊' },
-    { name: 'Grafana', icon: '📈' },
-    { name: 'VS Code', icon: '💻' },
-    { name: 'Figma', icon: '🎨' },
-    { name: 'Linux', icon: '🐧' },
-    { name: 'Jest', icon: '🧪' },
-    { name: 'Selenium', icon: '🔍' },
-    { name: 'Burp Suite', icon: '🛡️' },
-    { name: 'Analytics', icon: '📉' },
+    { name: 'CI/CD', icon: '🔄' },
+    { name: 'Jenkins', icon: '🤖' },
+    
+    // GitHub
+    { name: 'GitHub', icon: '🐙' },
+    { name: 'GitHub Actions', icon: '⚡' },
+    
+    // React Native
+    { name: 'React Native', icon: '📱' },
+    { name: 'Android', icon: '🤖' },
+    
+    // Technical Writing
+    { name: 'Markdown', icon: '📝' },
+    { name: 'Documentation', icon: '📚' },
   ];
 
   return (

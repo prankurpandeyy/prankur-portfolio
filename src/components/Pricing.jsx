@@ -1,48 +1,50 @@
-import { motion } from 'framer-motion';
-import { Code, FileText, BookOpen } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Code, FileText, BookOpen } from "lucide-react";
 
 const Pricing = () => {
   const plans = [
     {
       icon: <Code className="w-8 h-8" />,
-      title: 'MVP Development',
-      price: '$900',
-      bgColor: 'bg-pink-100',
+      title: "MVP Development",
+      price: "$1100",
+      bgColor: "bg-pink-100",
       features: [
-        'Full-stack web application',
-        'Responsive design',
-        'Basic authentication',
-        'Database integration',
-        '2 weeks delivery',
-        '1 month support',
+        "Full-stack web/mobile application",
+        "Responsive design",
+        "Authentication",
+        "Database Design & integration",
+        "E2E Testing",
+        "Deployement Support",
+        "4-6 weeks delivery",
+        "1 month support",
       ],
     },
     {
       icon: <FileText className="w-8 h-8" />,
-      title: 'Technical Blog',
-      price: '$500',
-      bgColor: 'bg-amber-100',
+      title: "Technical Blog",
+      price: "$500",
+      bgColor: "bg-amber-100",
       features: [
-        '2000-3000 words',
-        'SEO optimized',
-        'Code examples included',
-        'Original research',
-        '1 week delivery',
-        '2 revisions included',
+        "3000-6000 words",
+        "SEO optimized",
+        "Code examples included",
+        "Original research",
+        "1 week delivery",
+        "2 revisions included",
       ],
     },
     {
       icon: <BookOpen className="w-8 h-8" />,
-      title: 'Technical Documentation',
-      price: '$1000',
-      bgColor: 'bg-cyan-100',
+      title: "Technical Documentation",
+      price: "$1200",
+      bgColor: "bg-cyan-100",
       features: [
-        'Complete API docs',
-        'User guides',
-        'Developer tutorials',
-        'Interactive examples',
-        'Unlimited revisions',
-        'Ongoing maintenance',
+        "Complete API docs",
+        "User guides",
+        "Developer tutorials",
+        "Interactive examples",
+        "Unlimited revisions",
+        "Ongoing maintenance",
       ],
     },
   ];
@@ -79,7 +81,9 @@ const Pricing = () => {
               </div>
               <h3 className="text-2xl font-bold mb-4">{plan.title}</h3>
               <div className="mb-6">
-                <span className="text-5xl font-bold text-coral">{plan.price}</span>
+                <span className="text-5xl font-bold text-coral">
+                  {plan.price}
+                </span>
               </div>
               <ul className="space-y-3 mb-8 flex-grow">
                 {plan.features.map((feature) => (

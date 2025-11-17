@@ -65,12 +65,13 @@ const TermsAccordion = () => {
 
 1. Service Deliverables: Once a service has been delivered and accepted by the client, refunds are generally not available unless otherwise specified in the service agreement.
 
-2. Refund Requests: All refund requests must be submitted in writing within 7 days of service delivery. Requests should include detailed reasons for the refund request.
+2. Refund Requests: All refund requests must be submitted in writing within 2 day of service delivery. Requests should include detailed reasons for the refund request.
 
 3. Eligibility for Refunds:
    - Refunds may be considered for services not delivered as described in the service agreement.
    - Partial refunds may be provided for partially completed work, at our discretion.
    - No refunds will be provided for work that has been accepted by the client.
+   - No refunds will be given for resuming service after initial deposit and work has commenced.
 
 4. Processing Time: Approved refunds will be processed within 14 business days using the original payment method.
 
