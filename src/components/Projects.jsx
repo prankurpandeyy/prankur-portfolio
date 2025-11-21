@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ExternalLink, Github, ArrowRight, Sparkles } from 'lucide-react';
+import GlareCard from './GlareCard';
 
 const Projects = () => {
   const [ref, inView] = useInView({
@@ -105,7 +106,7 @@ const Projects = () => {
                 Portfolio
               </span>
             </motion.div>
-            <h2 className="text-4xl md:text-6xl font-bold mb-6">
+            <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">
               Projects That{' '}
               <span className="gradient-text">Deliver Results</span>
             </h2>
@@ -123,13 +124,13 @@ const Projects = () => {
                 initial={{ opacity: 0, y: 50 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -8, scale: 1.01, rotateY: 1, rotateX: 1 }}
-                style={{ perspective: 1000 }}
               >
-                <motion.div
-                  className="bg-white border-4 border-black p-8 rounded-lg relative overflow-hidden group h-full"
-                  transition={{ duration: 0.3 }}
-                >
+                <GlareCard className="group h-full">
+                  <motion.div
+                    className="bg-white border-4 border-black p-8 rounded-lg relative overflow-hidden h-full"
+                    whileHover={{ y: -8, scale: 1.01 }}
+                    transition={{ duration: 0.3 }}
+                  >
                     {/* Gradient accent */}
                     <motion.div
                       className={`absolute top-0 left-0 w-full h-2 bg-gradient-to-r ${project.gradient}`}
@@ -193,6 +194,7 @@ const Projects = () => {
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </motion.a>
                   </motion.div>
+                </GlareCard>
               </motion.div>
             ))}
           </div>

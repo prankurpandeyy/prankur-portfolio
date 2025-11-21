@@ -11,6 +11,11 @@
     @apply bg-white text-gray-900 font-sans antialiased;
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #ffffff 100%);
     background-attachment: fixed;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
   }
 
   * {

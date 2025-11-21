@@ -133,7 +133,7 @@ const Pricing = () => {
                 Pricing
               </span>
             </motion.div>
-            <h2 className="text-4xl md:text-6xl font-bold mb-6">
+            <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">
               Transparent Pricing,{' '}
               <span className="gradient-text">No Surprises</span>
             </h2>

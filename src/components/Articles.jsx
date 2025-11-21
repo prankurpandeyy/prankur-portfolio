@@ -269,7 +269,7 @@ const Articles = () => {
                 Technical Writing
               </span>
             </motion.div>
-            <h2 className="text-4xl md:text-6xl font-bold mb-4">
+            <h2 className="text-4xl md:text-6xl font-display font-bold mb-4">
               Published{' '}
               <span className="gradient-text">Articles</span>
             </h2>

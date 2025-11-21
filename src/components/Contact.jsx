@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Calendar, Mail, MessageCircle, MapPin, Github, Linkedin, Twitter, Clock, CheckCircle2, ArrowRight } from 'lucide-react';
+import MagneticButton from './MagneticButton';
+import ShimmerButton from './ShimmerButton';
 
 const Contact = () => {
   const [ref, inView] = useInView({
@@ -81,7 +83,7 @@ const Contact = () => {
                 Let's Connect
               </span>
             </motion.div>
-            <h2 className="text-4xl md:text-6xl font-bold mb-6">
+            <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">
               Ready to Build Something{' '}
               <span className="gradient-text">Extraordinary?</span>
             </h2>
@@ -136,20 +138,21 @@ const Contact = () => {
                   ))}
                 </ul>
 
-                <motion.a
-                  href="https://cal.com/prankurpandeyy"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group block w-full px-8 py-5 bg-gradient-to-r from-coral to-pink-500 text-white font-bold text-lg border-4 border-black shadow-xl text-center"
-                  whileHover={{ scale: 1.02, y: -2 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  <span className="flex items-center justify-center gap-2">
-                    <Calendar className="w-5 h-5" />
-                    Schedule Your Free Call Now
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </span>
-                </motion.a>
+                <MagneticButton className="w-full">
+                  <ShimmerButton
+                    as="a"
+                    href="https://cal.com/prankurpandeyy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group block w-full px-8 py-5 bg-gradient-to-r from-coral to-pink-500 text-white font-display font-bold text-lg border-4 border-black shadow-xl text-center"
+                  >
+                    <span className="flex items-center justify-center gap-2 relative z-10">
+                      <Calendar className="w-5 h-5" />
+                      Schedule Your Free Call Now
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </span>
+                  </ShimmerButton>
+                </MagneticButton>
 
                 <p className="text-sm text-gray-500 mt-4 text-center">
                   ⚡ Usually responds within 24 hours

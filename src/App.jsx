@@ -5,6 +5,7 @@ import TechStack from './components/TechStack';
 import Projects from './components/Projects';
 import Articles from './components/Articles';
 import Pricing from './components/Pricing';
+import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
@@ -20,6 +21,7 @@ function App() {
         <Projects />
         <Articles />
         <Pricing />
+        <Testimonials />
         <Contact />
       </main>
       <Footer />

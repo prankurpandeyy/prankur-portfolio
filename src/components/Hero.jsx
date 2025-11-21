@@ -1,6 +1,10 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ArrowRight, Sparkles, Zap } from 'lucide-react';
+import AnimatedGradientText from './AnimatedGradientText';
+import MagneticButton from './MagneticButton';
+import FloatingParticles from './FloatingParticles';
+import ShimmerButton from './ShimmerButton';
 
 const Hero = () => {
   const [ref, inView] = useInView({
@@ -36,6 +40,9 @@ const Hero = () => {
       id="home" 
       className="relative pt-32 pb-20 overflow-hidden particle-bg border-b-4 border-black"
     >
+      {/* Floating Particles */}
+      <FloatingParticles count={30} />
+      
       {/* Animated gradient background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -103,13 +110,15 @@ const Hero = () => {
           {/* Main Headline */}
           <motion.h1
             variants={itemVariants}
-            className="text-5xl md:text-6xl lg:text-8xl font-bold leading-tight mb-6"
+            className="text-5xl md:text-6xl lg:text-8xl font-display font-bold leading-tight mb-6"
           >
             <span className="block">Turn Your Vision Into</span>
-            <span className="block gradient-text animate-gradient">
-              Digital Reality
+            <span className="block">
+              <AnimatedGradientText className="text-5xl md:text-6xl lg:text-8xl font-display font-bold">
+                Digital Reality
+              </AnimatedGradientText>
             </span>
-            <span className="block text-4xl md:text-5xl lg:text-6xl mt-4 text-gray-700">
+            <span className="block text-4xl md:text-5xl lg:text-6xl mt-4 text-gray-700 font-display">
               Full-Stack Developer & Technical Writer
             </span>
           </motion.h1>
@@ -138,35 +147,32 @@ const Hero = () => {
             variants={itemVariants}
             className="flex flex-wrap justify-center gap-6 mb-16"
           >
-            <motion.a
-              href="https://cal.com/prankurpandeyy"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative px-10 py-5 bg-gradient-to-r from-coral to-pink-500 text-white font-bold text-lg border-4 border-black shadow-2xl overflow-hidden"
-              whileHover={{ scale: 1.05, y: -3 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <span className="relative z-10 flex items-center gap-2">
-                <Zap className="w-5 h-5" />
-                Book a Free Strategy Call
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </span>
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-pink-500 to-coral"
-                initial={{ x: '-100%' }}
-                whileHover={{ x: 0 }}
-                transition={{ duration: 0.3 }}
-              />
-            </motion.a>
+            <MagneticButton>
+              <ShimmerButton
+                as="a"
+                href="https://cal.com/prankurpandeyy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative px-10 py-5 bg-gradient-to-r from-coral to-pink-500 text-white font-display font-bold text-lg border-4 border-black shadow-2xl"
+              >
+                <span className="relative z-10 flex items-center gap-2">
+                  <Zap className="w-5 h-5" />
+                  Book a Free Strategy Call
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </ShimmerButton>
+            </MagneticButton>
 
-            <motion.a
-              href="#projects"
-              className="px-10 py-5 bg-white text-black font-bold text-lg border-4 border-black shadow-2xl hover:bg-gray-50 transition-all"
-              whileHover={{ scale: 1.05, y: -3 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              View My Work
-            </motion.a>
+            <MagneticButton>
+              <motion.a
+                href="#projects"
+                className="px-10 py-5 bg-white text-black font-display font-bold text-lg border-4 border-black shadow-2xl hover:bg-gray-50 transition-all block"
+                whileHover={{ scale: 1.05, y: -3 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                View My Work
+              </motion.a>
+            </MagneticButton>
           </motion.div>
 
           {/* Trust Indicators */}

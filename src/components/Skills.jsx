@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Code, Smartphone, FileText, BarChart3, Cloud, ArrowRight } from 'lucide-react';
+import GlareCard from './GlareCard';
 
 const Skills = () => {
   const [ref, inView] = useInView({
@@ -109,7 +110,7 @@ const Skills = () => {
                 What I Do Best
               </span>
             </motion.div>
-            <h2 className="text-4xl md:text-6xl font-bold mb-6">
+            <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">
               Services That{' '}
               <span className="gradient-text">Drive Results</span>
             </h2>
@@ -127,13 +128,13 @@ const Skills = () => {
                 initial={{ opacity: 0, y: 50 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
-                whileHover={{ y: -8, scale: 1.02, rotateY: 2, rotateX: 2 }}
-                style={{ perspective: 1000 }}
               >
-                <motion.div
-                  className={`${skill.bgColor} border-4 border-black p-8 rounded-lg relative overflow-hidden group h-full`}
-                  transition={{ duration: 0.3 }}
-                >
+                <GlareCard className="group h-full">
+                  <motion.div
+                    className={`${skill.bgColor} border-4 border-black p-8 rounded-lg relative overflow-hidden h-full`}
+                    whileHover={{ y: -8, scale: 1.02 }}
+                    transition={{ duration: 0.3 }}
+                  >
                     {/* Animated background element */}
                     <motion.div
                       className={`absolute top-0 right-0 w-40 h-40 ${skill.iconBg} opacity-10 rounded-full blur-2xl`}
@@ -200,6 +201,7 @@ const Skills = () => {
                       </motion.a>
                     </div>
                   </motion.div>
+                </GlareCard>
               </motion.div>
             ))}
           </div>
